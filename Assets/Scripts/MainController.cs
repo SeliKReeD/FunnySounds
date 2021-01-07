@@ -12,6 +12,8 @@ public class MainController : MonoBehaviour
     public int columns;
 
     public GridLayoutGroup gridLayoutGroup;
+
+    public ButtonScriptableObject buttonScriptableObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,16 @@ public class MainController : MonoBehaviour
         Debug.Log(width);
         gridLayoutGroup.cellSize = new Vector2(width/columns, width/columns);
 
-        for (int i = 0; i < buttonCount; i++)
+        List<ButtonObject> buttonObjects = buttonScriptableObject.buttons;
+
+        for (int i = 0; i < buttonObjects.Count; i++)
         {
             GameObject newButton = (GameObject) Instantiate(buttonPrefab);
             newButton.GetComponent<ButtonController>().setId(i);
+
+            newButton.GetComponent<ButtonController>().setImage(buttonObjects[i].sprite);
             newButton.transform.SetParent(buttonPanel, false);
+
         }
     }
 

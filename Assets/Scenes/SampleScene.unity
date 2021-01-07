@@ -379,10 +379,10 @@ RectTransform:
   m_Father: {fileID: 1319092592}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 368, y: 654}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1256350532
 MonoBehaviour:
@@ -566,7 +566,7 @@ MonoBehaviour:
   buttonPanel: {fileID: 724901547}
   buttonPrefab: {fileID: 2257571185465337873, guid: 5e44a39e84ef4f34e9ce6496b22cb3d2,
     type: 3}
-  buttonCount: 100
+  buttonCount: 1
   columns: 3
   gridLayoutGroup: {fileID: 724901548}
 --- !u!1 &1730746091

@@ -7,7 +7,7 @@ public class ButtonController : MonoBehaviour
 {
 
     private int id;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +33,10 @@ public class ButtonController : MonoBehaviour
     public int getId()
     {
         return id;
+    }
+
+    public void setImage(Sprite sprite)
+    {
+        this.GetComponent<Image>().sprite = sprite;
     }
 }
