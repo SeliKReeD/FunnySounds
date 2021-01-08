@@ -17,3 +17,5 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: f434da67ba32a9247a0ef4e3251e98e1, type: 3}
   - clip: {fileID: 0}
     sprite: {fileID: 21300000, guid: dacb69914f4136044870b07298ca4d13, type: 3}
+  - clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 2914b13723f42c14eab14308cc29c9f8, type: 3}

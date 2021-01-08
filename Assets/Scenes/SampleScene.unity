@@ -569,6 +569,8 @@ MonoBehaviour:
   buttonCount: 1
   columns: 3
   gridLayoutGroup: {fileID: 724901548}
+  buttonScriptableObject: {fileID: 11400000, guid: b9c562f3e852eda4c82750e8d0b05d68,
+    type: 2}
 --- !u!1 &1730746091
 GameObject:
   m_ObjectHideFlags: 0
