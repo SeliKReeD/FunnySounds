@@ -9,6 +9,7 @@ public class ButtonController : MonoBehaviour
     private int id;
 
     public Image buttonImage;
+    public AudioClip buttonAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -42,8 +43,8 @@ public class ButtonController : MonoBehaviour
         buttonImage.sprite = sprite;
     }
 
-    public void setAuido(AudioClip audio) 
+    public void setAudioClip(AudioClip audio) 
     {
-        
+        buttonAudio = audio;
     }
 }
