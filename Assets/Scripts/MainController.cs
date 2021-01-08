@@ -32,7 +32,6 @@ public class MainController : MonoBehaviour
             newButton.transform.SetParent(buttonPanel, false);
 
             newButton.GetComponent<ButtonController>().setAudioClip(buttonObjects[i].clip);
-
         }
     }
 
