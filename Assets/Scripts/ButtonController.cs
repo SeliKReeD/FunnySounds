@@ -10,6 +10,8 @@ public class ButtonController : MonoBehaviour
 
     public Image buttonImage;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class ButtonController : MonoBehaviour
     public void OnButtonClick()
     {
         Debug.Log("Button click " + id);
+        playAudio();
     }
 
     public void setId(int id)
@@ -40,5 +43,15 @@ public class ButtonController : MonoBehaviour
     public void setImage(Sprite sprite)
     {
         buttonImage.sprite = sprite;
+    }
+
+    public void setAudioClip(AudioClip clip) 
+    {
+        audioSource.clip = clip;
+    }
+
+    public void playAudio()
+    {
+        audioSource.Play();
     }
 }
