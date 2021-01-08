@@ -41,4 +41,9 @@ public class ButtonController : MonoBehaviour
     {
         buttonImage.sprite = sprite;
     }
+
+    public void setAuido(AudioClip audio) 
+    {
+        
+    }
 }

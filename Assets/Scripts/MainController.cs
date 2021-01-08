@@ -31,6 +31,7 @@ public class MainController : MonoBehaviour
             newButton.GetComponent<ButtonController>().setImage(buttonObjects[i].sprite);
             newButton.transform.SetParent(buttonPanel, false);
 
+            
         }
     }
 
