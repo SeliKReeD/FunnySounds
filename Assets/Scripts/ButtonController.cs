@@ -15,13 +15,15 @@ public class ButtonController : MonoBehaviour
     void Start()
     {
         this.GetComponent<Button>().onClick.AddListener(OnButtonClick);
-        this.eventHandler.updateAudioSourceContent(this.audioSource);
     }
 
     public void OnButtonClick()
     {
-        Debug.Log("Button click " + id);
-        if (!this.eventHandler.getSoundActiveStatus())
+        //Debug.Log("Button click " + id);
+        this.eventHandler.updateButtonsClickedCounter(gameObject, 1);
+        this.eventHandler.updateAudioSourceContent(this.audioSource);
+        //Debug.Log("Current button clicks : " + this.eventHandler.getButtonsClickedCounter()[gameObject]);
+        if (!this.eventHandler.getSoundActiveStatus() && !this.eventHandler.getAudioSourceContentPlayingStatus())
         {
             this.eventHandler.updateSoundActiveStatus(true);
             StartCoroutine(playAudio());
