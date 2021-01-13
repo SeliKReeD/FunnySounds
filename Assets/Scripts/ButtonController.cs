@@ -5,29 +5,27 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
-
     private int id;
 
     public Image buttonImage;
-
     public AudioSource audioSource;
+    public EventHandler eventHandler;
 
     // Start is called before the first frame update
     void Start()
     {
         this.GetComponent<Button>().onClick.AddListener(OnButtonClick);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        this.eventHandler.updateAudioSourceContent(this.audioSource);
     }
 
     public void OnButtonClick()
     {
         Debug.Log("Button click " + id);
-        playAudio();
+        if (!this.eventHandler.getSoundActiveStatus())
+        {
+            this.eventHandler.updateSoundActiveStatus(true);
+            StartCoroutine(playAudio());
+        }
     }
 
     public void setId(int id)
@@ -47,11 +45,14 @@ public class ButtonController : MonoBehaviour
 
     public void setAudioClip(AudioClip clip) 
     {
-        audioSource.clip = clip;
+        this.audioSource.clip = clip;
     }
 
-    public void playAudio()
+    IEnumerator playAudio()
     {
-        audioSource.Play();
+        this.audioSource.Play();
+        yield return new WaitForSeconds(this.audioSource.clip.length);
+        this.eventHandler.updateSoundActiveStatus(false);
+
     }
 }

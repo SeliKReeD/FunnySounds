@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d44fedb29e8f1743afc3cd9fa561d9c, type: 3}
-  m_Name: NewScriptableObject
+  m_Name: ScriptableObject
   m_EditorClassIdentifier: 
   buttons:
-  - clip: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b6cdd130a27809f4f8e9c50e9a4a0be5, type: 3}
     sprite: {fileID: 21300000, guid: f434da67ba32a9247a0ef4e3251e98e1, type: 3}
-  - clip: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b6cdd130a27809f4f8e9c50e9a4a0be5, type: 3}
     sprite: {fileID: 21300000, guid: dacb69914f4136044870b07298ca4d13, type: 3}
-  - clip: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 2914b13723f42c14eab14308cc29c9f8, type: 3}
+  - clip: {fileID: 8300000, guid: b118acb0eb1f8064fbf7d2f66682e6a4, type: 3}
+    sprite: {fileID: 21300000, guid: 7ba7d2676154252438f61d6a5d252587, type: 3}
